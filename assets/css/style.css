@@ -1,0 +1,102 @@
+/* Custom Enhancements for HVACConnectUSA */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap');
+
+:root {
+  --primary-navy: #0A192F;
+  --secondary-navy: #112240;
+  --accent-blue: #0284C7;
+  --accent-cyan: #38BDF8;
+  --emergency-orange: #FF5E00;
+  --emergency-hover: #E05200;
+  --safety-green: #10B981;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #1E293B;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Pulsing Badge Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 94, 0, 0.6);
+  }
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0 0 0 10px rgba(255, 94, 0, 0);
+  }
+}
+
+.pulse-emergency {
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+@keyframes liveDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.live-indicator {
+  animation: liveDot 1.5s infinite ease-in-out;
+}
+
+/* Glassmorphism & Cards */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.hero-overlay {
+  background: radial-gradient(circle at 80% 20%, rgba(2, 132, 199, 0.15) 0%, transparent 60%),
+              radial-gradient(circle at 10% 80%, rgba(255, 94, 0, 0.08) 0%, transparent 50%);
+}
+
+/* Interactive Tabs & Accordions */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+  opacity: 0;
+}
+
+.faq-item.active .faq-content {
+  max-height: 350px;
+  opacity: 1;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Card hover transitions */
+.service-card {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 10px 10px -5px rgba(15, 23, 42, 0.04);
+}
+
