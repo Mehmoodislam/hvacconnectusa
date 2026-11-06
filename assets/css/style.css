@@ -16,6 +16,18 @@ body {
   color: #1E293B;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+  padding-bottom: 76px; /* Avoid mobile floating bottom bar overlap */
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-bottom: 0;
+  }
+}
+
+/* Safe area padding for iPhones & modern mobiles */
+.safe-bottom {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
 }
 
 h1, h2, h3, h4, .font-heading {
