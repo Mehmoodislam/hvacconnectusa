@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
@@ -263,12 +263,14 @@
           </a>
 
           <!-- Desktop Navigation with Active Underline and Green Hover -->
-          <nav class="hidden lg:flex items-center gap-8 font-semibold text-sm" aria-label="Main Navigation">
+          <nav class="hidden lg:flex items-center gap-4 xl:gap-6 font-semibold text-sm shrink-0 whitespace-nowrap" aria-label="Main Navigation">
             <a href="#" class="nav-link-active font-bold transition-colors">Home</a>
             <a href="#services" class="text-slate-700 hover:text-[#0d8a5b] transition-colors">Services</a>
-            <a href="#why-us" class="text-slate-700 hover:text-[#0d8a5b] transition-colors">Why Choose Us</a>
-            <a href="#estimator" class="text-slate-700 hover:text-[#0d8a5b] transition-colors">Cost Estimator</a>
-            <a href="#reviews" class="text-slate-700 hover:text-[#0d8a5b] transition-colors">Customer Reviews</a>
+            <a href="about.html" class="text-slate-700 hover:text-[#0d8a5b] transition-colors">About</a>
+            <a href="#projects" class="text-slate-700 hover:text-[#0d8a5b] transition-colors">Projects</a>
+            <a href="#why-us" class="text-slate-700 hover:text-[#0d8a5b] transition-colors">Why Us</a>
+            <a href="#estimator" class="text-slate-700 hover:text-[#0d8a5b] transition-colors">Estimator</a>
+            <a href="#reviews" class="text-slate-700 hover:text-[#0d8a5b] transition-colors">Testimonials</a>
             <a href="#faq" class="text-slate-700 hover:text-[#0d8a5b] transition-colors">FAQ</a>
           </nav>
 
@@ -305,10 +307,12 @@
         <!-- Mobile Dropdown Navigation -->
         <div id="mobileNav" class="hidden lg:hidden border-t border-slate-200 py-3 space-y-2 bg-white">
           <a href="#" class="block px-3 py-2 rounded-md font-semibold text-sm text-[#0d8a5b] bg-[#e8f8f0]">Home</a>
+          <a href="about.html" class="block px-3 py-2 rounded-md font-semibold text-sm text-slate-700 hover:bg-slate-100">About</a>
           <a href="#services" class="block px-3 py-2 rounded-md font-semibold text-sm text-slate-700 hover:bg-slate-100">Services</a>
-          <a href="#why-us" class="block px-3 py-2 rounded-md font-semibold text-sm text-slate-700 hover:bg-slate-100">Why Choose Us</a>
+          <a href="#projects" class="block px-3 py-2 rounded-md font-semibold text-sm text-slate-700 hover:bg-slate-100">Projects</a>
+          <a href="#why-us" class="block px-3 py-2 rounded-md font-semibold text-sm text-slate-700 hover:bg-slate-100">Why Us</a>
           <a href="#estimator" class="block px-3 py-2 rounded-md font-semibold text-sm text-slate-700 hover:bg-slate-100">Cost Estimator</a>
-          <a href="#reviews" class="block px-3 py-2 rounded-md font-semibold text-sm text-slate-700 hover:bg-slate-100">Reviews &amp; Ratings</a>
+          <a href="#reviews" class="block px-3 py-2 rounded-md font-semibold text-sm text-slate-700 hover:bg-slate-100">Testimonials</a>
           <a href="#faq" class="block px-3 py-2 rounded-md font-semibold text-sm text-slate-700 hover:bg-slate-100">FAQ</a>
           <div class="pt-2">
             <a href="#dispatch-form" class="block w-full text-center py-2.5 rounded-full text-white font-bold text-sm bg-[#0d8a5b] shadow-md">
@@ -787,6 +791,131 @@
     </section>
 
     <!-- =========================================================================
+       ABOUT US SECTION (Exact Match to Reference Layout: 3-Column Desktop Split)
+       ========================================================================= -->
+    <section id="about" class="py-16 sm:py-24 bg-white relative overflow-hidden border-t border-slate-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-12 items-center">
+          
+          <!-- Column 1 (Left): Outdoor Condenser Image + Circular Trusted Badge -->
+          <div class="lg:col-span-5">
+            <div class="relative max-w-md mx-auto lg:max-w-none pr-3 pb-3 sm:pr-5 sm:pb-5">
+              
+              <!-- Main Outdoor AC Condenser System Photo -->
+              <div class="relative overflow-hidden rounded-3xl shadow-xl border border-slate-100 aspect-[4/3] bg-slate-100 group">
+                <img 
+                  src="/assets/images/about.jpg" 
+                  alt="Outdoor HVAC Condenser and Heat Pump System - HVACConnectUSA" 
+                  loading="lazy"
+                  width="1000"
+                  height="750"
+                  class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                />
+                <!-- Subtle Gradient Vignette -->
+                <div class="absolute inset-0 bg-gradient-to-t from-[#052e24]/30 via-transparent to-transparent pointer-events-none"></div>
+              </div>
+
+              <!-- Floating Circular Badge: "Trusted Since 2010" -->
+              <div class="absolute -bottom-3 -right-1 sm:-bottom-4 sm:-right-2 bg-white rounded-full p-3 sm:p-4 shadow-2xl border-4 border-emerald-50 flex flex-col items-center justify-center text-center w-28 h-28 sm:w-32 sm:h-32 z-10 pulse-emerald">
+                <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-emerald-50 text-[#0d8a5b] flex items-center justify-center mb-0.5">
+                  <svg class="w-4 h-4 sm:w-5 sm:h-5 text-[#0d8a5b]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                  </svg>
+                </div>
+                <span class="text-xs sm:text-sm font-black text-[#052e24] leading-tight font-heading">Trusted</span>
+                <span class="text-[10px] sm:text-xs font-bold text-slate-500 leading-tight">Since 2010</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Column 2 (Center): About Copy + SEO Content + Pill CTA Button -->
+          <div class="lg:col-span-4 mt-6 lg:mt-0 text-left">
+            <!-- Tag with Green Dash -->
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-6 h-1 bg-[#0d8a5b] rounded-full inline-block"></span>
+              <span class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#0d8a5b]">About Us</span>
+            </div>
+
+            <!-- Headline -->
+            <h2 class="text-3xl sm:text-4xl xl:text-[40px] font-black text-[#052e24] font-heading leading-tight tracking-tight mb-4">
+              Your Trusted <span class="text-[#0d8a5b]">HVAC</span> Partner
+            </h2>
+
+            <!-- SEO Content Description -->
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6 font-normal">
+              We specialize in providing top-quality HVAC services with a commitment to comfort, efficiency, and reliability. Our experienced team ensures your systems run perfectly, all year round.
+            </p>
+
+            <!-- Pill CTA Button -->
+            <a href="#dispatch-form" class="inline-flex items-center gap-2 px-6 sm:px-7 py-3 rounded-full text-white font-bold text-sm bg-gradient-to-r from-[#0d8a5b] to-[#12a36c] hover:from-[#0b774e] hover:to-[#0d8a5b] shadow-lg shadow-emerald-800/20 hover:shadow-emerald-800/30 transition-all transform hover:-translate-y-0.5">
+              <span>Learn More</span>
+              <span class="text-base">&rarr;</span>
+            </a>
+          </div>
+
+          <!-- Column 3 (Right): 4 Stacked Feature Badges with Circular Green Outline Icons -->
+          <div class="lg:col-span-3 mt-8 lg:mt-0">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4 sm:gap-5">
+              
+              <!-- Feature 1: Skilled & Certified Technicians -->
+              <div class="flex items-center gap-3.5 group">
+                <div class="w-12 h-12 rounded-full border-2 border-emerald-300 bg-emerald-50/70 text-[#0d8a5b] flex items-center justify-center shrink-0 group-hover:bg-[#0d8a5b] group-hover:text-white group-hover:border-[#0d8a5b] transition-all shadow-sm">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-bold text-[#052e24] text-sm sm:text-base leading-snug">Skilled &amp; Certified Technicians</h3>
+                </div>
+              </div>
+
+              <!-- Feature 2: Energy-Efficient Solutions -->
+              <div class="flex items-center gap-3.5 group">
+                <div class="w-12 h-12 rounded-full border-2 border-emerald-300 bg-emerald-50/70 text-[#0d8a5b] flex items-center justify-center shrink-0 group-hover:bg-[#0d8a5b] group-hover:text-white group-hover:border-[#0d8a5b] transition-all shadow-sm">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-bold text-[#052e24] text-sm sm:text-base leading-snug">Energy-Efficient Solutions</h3>
+                </div>
+              </div>
+
+              <!-- Feature 3: Affordable Pricing -->
+              <div class="flex items-center gap-3.5 group">
+                <div class="w-12 h-12 rounded-full border-2 border-emerald-300 bg-emerald-50/70 text-[#0d8a5b] flex items-center justify-center shrink-0 group-hover:bg-[#0d8a5b] group-hover:text-white group-hover:border-[#0d8a5b] transition-all shadow-sm">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-bold text-[#052e24] text-sm sm:text-base leading-snug">Affordable Pricing</h3>
+                </div>
+              </div>
+
+              <!-- Feature 4: 24/7 Emergency Support -->
+              <div class="flex items-center gap-3.5 group">
+                <div class="w-12 h-12 rounded-full border-2 border-emerald-300 bg-emerald-50/70 text-[#0d8a5b] flex items-center justify-center shrink-0 group-hover:bg-[#0d8a5b] group-hover:text-white group-hover:border-[#0d8a5b] transition-all shadow-sm">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-bold text-[#052e24] text-sm sm:text-base leading-snug">24/7 Emergency Support</h3>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
        INTERACTIVE COST ESTIMATOR CALCULATOR
        ========================================================================= -->
     <section id="estimator" class="py-20 bg-brand-navy text-white relative overflow-hidden">
@@ -952,61 +1081,73 @@
     </section>
 
     <!-- =========================================================================
-       HOW IT WORKS (Simple 4-Step Process)
+       HOW IT WORKS (Fast & Seamless Experience - Match Reference Screenshot)
        ========================================================================= -->
-    <section class="py-20 bg-slate-50 border-y border-slate-200">
+    <section class="py-20 bg-[#fbfdfc] border-y border-slate-200/70">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="text-xs font-bold uppercase tracking-wider text-brand-orange bg-orange-100 px-3 py-1 rounded-full">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="text-xs font-extrabold uppercase tracking-wider text-[#0d8a5b] bg-[#e8f8f0] border border-emerald-200/80 px-3.5 py-1.5 rounded-full inline-block mb-3 shadow-xs">
             Fast &amp; Seamless Experience
           </span>
-          <h2 class="text-3xl sm:text-4xl font-black font-heading text-brand-navy mt-4 mb-4">
-            How Our Emergency Dispatch Works
+          <h2 class="text-3xl sm:text-4xl font-black font-heading text-[#052e24] mb-3">
+            How Our <span class="text-[#0d8a5b]">Emergency Dispatch</span> Works
           </h2>
-          <p class="text-base text-slate-600">
+          <p class="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
             Getting your home comfort restored is hassle-free. Here is what happens when you reach out:
           </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4 xl:gap-4">
           
-          <div class="bg-white p-6 rounded-2xl border border-slate-200 relative text-center">
-            <div class="w-12 h-12 rounded-xl bg-orange-100 text-brand-orange font-black text-xl flex items-center justify-center mx-auto mb-4">
+          <!-- Card 1: Request Service (Count: 1) -->
+          <div class="bg-white rounded-2xl p-7 border border-slate-200 service-card shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5 text-center flex flex-col items-center justify-start group">
+            <div class="w-12 h-12 rounded-full bg-[#e8f8f0] text-[#0d8a5b] border border-emerald-200 font-black text-xl flex items-center justify-center mx-auto mb-4 shadow-xs group-hover:bg-[#0d8a5b] group-hover:text-white group-hover:border-[#0d8a5b] transition-all">
               1
             </div>
-            <h3 class="font-bold font-heading text-lg text-brand-navy mb-2">Request Service</h3>
-            <p class="text-xs sm:text-sm text-slate-600">
+            <h3 class="font-bold font-heading text-base sm:text-lg text-[#052e24] mb-2 leading-snug">
+              Request Service
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
               Call our 24/7 hotline at (800) 555-4822 or submit your ZIP code in our fast online dispatcher.
             </p>
           </div>
 
-          <div class="bg-white p-6 rounded-2xl border border-slate-200 relative text-center">
-            <div class="w-12 h-12 rounded-xl bg-blue-100 text-brand-blue font-black text-xl flex items-center justify-center mx-auto mb-4">
+          <!-- Card 2: Instant Dispatch (Count: 2) -->
+          <div class="bg-white p-7 rounded-2xl border border-slate-200/70 hover:border-emerald-300 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5 text-center flex flex-col items-center justify-start group">
+            <div class="w-12 h-12 rounded-full bg-[#e8f8f0] text-[#0d8a5b] border border-emerald-200 font-black text-xl flex items-center justify-center mx-auto mb-4 shadow-xs group-hover:bg-[#0d8a5b] group-hover:text-white group-hover:border-[#0d8a5b] transition-all">
               2
             </div>
-            <h3 class="font-bold font-heading text-lg text-brand-navy mb-2">Instant Dispatch</h3>
-            <p class="text-xs sm:text-sm text-slate-600">
+            <h3 class="font-bold font-heading text-base sm:text-lg text-[#052e24] mb-2 leading-snug">
+              Instant Dispatch
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
               A certified local technician in a fully stocked truck is routed to your home with live tracking.
             </p>
           </div>
 
-          <div class="bg-white p-6 rounded-2xl border border-slate-200 relative text-center">
-            <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 font-black text-xl flex items-center justify-center mx-auto mb-4">
+          <!-- Card 3: Upfront Quote (Count: 3) -->
+          <div class="bg-white p-7 rounded-2xl border border-slate-200/70 hover:border-emerald-300 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5 text-center flex flex-col items-center justify-start group">
+            <div class="w-12 h-12 rounded-full bg-[#e8f8f0] text-[#0d8a5b] border border-emerald-200 font-black text-xl flex items-center justify-center mx-auto mb-4 shadow-xs group-hover:bg-[#0d8a5b] group-hover:text-white group-hover:border-[#0d8a5b] transition-all">
               3
             </div>
-            <h3 class="font-bold font-heading text-lg text-brand-navy mb-2">Upfront Quote</h3>
-            <p class="text-xs sm:text-sm text-slate-600">
+            <h3 class="font-bold font-heading text-base sm:text-lg text-[#052e24] mb-2 leading-snug">
+              Upfront Quote
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
               Our technician inspects your system and presents transparent, flat-rate options. You approve first.
             </p>
           </div>
 
-          <div class="bg-white p-6 rounded-2xl border border-slate-200 relative text-center">
-            <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 font-black text-xl flex items-center justify-center mx-auto mb-4">
+          <!-- Card 4: Fixed & Guaranteed (Count: 4) -->
+          <div class="bg-white p-7 rounded-2xl border border-slate-200/70 hover:border-emerald-300 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5 text-center flex flex-col items-center justify-start group">
+            <div class="w-12 h-12 rounded-full bg-[#e8f8f0] text-[#0d8a5b] border border-emerald-200 font-black text-xl flex items-center justify-center mx-auto mb-4 shadow-xs group-hover:bg-[#0d8a5b] group-hover:text-white group-hover:border-[#0d8a5b] transition-all">
               4
             </div>
-            <h3 class="font-bold font-heading text-lg text-brand-navy mb-2">Fixed &amp; Guaranteed</h3>
-            <p class="text-xs sm:text-sm text-slate-600">
+            <h3 class="font-bold font-heading text-base sm:text-lg text-[#052e24] mb-2 leading-snug">
+              Fixed &amp; Guaranteed
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">
               Work is completed same-day and backed by our full 1-Year Parts &amp; Labor Satisfaction Guarantee.
             </p>
           </div>
@@ -1017,91 +1158,239 @@
     </section>
 
     <!-- =========================================================================
-       CUSTOMER REVIEWS & SOCIAL PROOF
+       OUR RECENT PROJECTS (Pine Gradient Container - Top Corners Rounded Only)
        ========================================================================= -->
-    <section id="reviews" class="py-20 bg-white">
+    <section id="projects" class="pt-12 sm:pt-16 pb-0 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <div class="inline-flex items-center gap-1 text-amber-400 text-lg mb-2">
-            ★★★★★
+        <!-- Pine Green Banner Container: Top-Left & Top-Right Rounded Only (Rounded-T-[36px], Rounded-B-None) -->
+        <div class="bg-gradient-to-r from-[#031d16] via-[#052e24] to-[#093e30] rounded-t-[32px] sm:rounded-t-[44px] rounded-b-none p-6 sm:p-8 lg:p-10 shadow-xl relative overflow-hidden">
+          
+          <!-- Background Ambient Glow & Dot Grid -->
+          <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#34d399_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
+
+          <!-- Header Row -->
+          <div class="relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-7 sm:mb-8">
+            <div>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-6 h-1 bg-[#34d399] rounded-full inline-block"></span>
+                <span class="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#34d399]">Our Recent Projects</span>
+              </div>
+              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black font-heading text-white tracking-tight">
+                Delivering Comfort, One Project at a Time
+              </h2>
+            </div>
+
+            <!-- View All Projects Pill Button -->
+            <a href="#services" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/35 hover:border-white text-white hover:bg-white/10 text-xs sm:text-sm font-bold transition-all shrink-0">
+              <span>View All Projects</span>
+              <span class="text-base">&rarr;</span>
+            </a>
           </div>
-          <h2 class="text-3xl sm:text-4xl font-black font-heading text-brand-navy mb-4">
-            Over 14,800+ Satisfied Homeowners Nationwide
+
+          <!-- 4 Project Gallery Cards Row (Exact Match to Screenshot) -->
+          <div class="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+            
+            <!-- Project 1: Skilled Technicians with Safety Glasses -->
+            <div class="relative overflow-hidden rounded-2xl shadow-lg border border-white/10 group aspect-[4/3] bg-[#02140f]">
+              <img 
+                src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80" 
+                alt="HVAC Engineers and Technicians System Tuning" 
+                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                width="700"
+                height="525"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3.5">
+                <span class="text-xs font-bold text-white tracking-wide drop-shadow-md">Precision System Calibration</span>
+              </div>
+            </div>
+
+            <!-- Project 2: Technician with Yellow Hardhat on Control Panel -->
+            <div class="relative overflow-hidden rounded-2xl shadow-lg border border-white/10 group aspect-[4/3] bg-[#02140f]">
+              <img 
+                src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=700&q=80" 
+                alt="Licensed Electrician and HVAC Technician on Panel" 
+                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                width="700"
+                height="525"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3.5">
+                <span class="text-xs font-bold text-white tracking-wide drop-shadow-md">Electrical &amp; Control Wiring</span>
+              </div>
+            </div>
+
+            <!-- Project 3: Welder with Helmet and Welding Torch Sparks -->
+            <div class="relative overflow-hidden rounded-2xl shadow-lg border border-white/10 group aspect-[4/3] bg-[#02140f]">
+              <img 
+                src="https://images.unsplash.com/photo-1508465818649-14a170138405?auto=format&fit=crop&w=700&q=80" 
+                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80';"
+                alt="High-Pressure Refrigerant Pipe Welding and Brazing" 
+                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                width="700"
+                height="525"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3.5">
+                <span class="text-xs font-bold text-white tracking-wide drop-shadow-md">Line Brazing &amp; Pipe Welding</span>
+              </div>
+            </div>
+
+            <!-- Project 4: Modern Luxury Residential Home at Dusk -->
+            <div class="relative overflow-hidden rounded-2xl shadow-lg border border-white/10 group aspect-[4/3] bg-[#02140f]">
+              <img 
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80" 
+                alt="Whole-Home Central Climate Control Installation" 
+                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                width="700"
+                height="525"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3.5">
+                <span class="text-xs font-bold text-white tracking-wide drop-shadow-md">Whole-Home HVAC Installation</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+       CUSTOMER REVIEWS & TESTIMONIALS (Exact Match to Screenshot Layout)
+       ========================================================================= -->
+    <section id="reviews" class="py-10 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <h2 class="text-3xl sm:text-4xl font-black font-heading text-[#052e24] mb-2 tracking-tight">
+            What Our <span class="text-[#0d8a5b]">Clients Say</span>
           </h2>
-          <p class="text-base text-slate-600">
-            Read real, verified reviews from homeowners who needed emergency cooling, heating, or plumbing repair.
+          <p class="text-sm sm:text-base text-slate-500">
+            Real feedback from our valued customers.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-7">
           
-          <!-- Testimonial 1 -->
-          <div class="bg-slate-50 p-7 rounded-2xl border border-slate-200 flex flex-col justify-between">
+          <!-- Testimonial 1 (Robert Henderson) -->
+          <div class="bg-white p-6 sm:p-7 rounded-3xl border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col justify-between relative group">
             <div>
-              <div class="flex items-center justify-between mb-4">
-                <div class="text-amber-400 text-base">★★★★★</div>
-                <span class="text-xs font-semibold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">Verified Service</span>
+              <!-- Green Quote Mark -->
+              <div class="mb-3 text-[#0d8a5b]">
+                <svg class="w-6 h-6 fill-current text-[#0d8a5b]" viewBox="0 0 24 24">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                </svg>
               </div>
-              <p class="text-sm text-slate-700 italic leading-relaxed mb-6">
-                "Our AC quit working at 6 PM during a 104-degree heatwave in Dallas. We called HVACConnectUSA and technician Marcus arrived in 40 minutes! He replaced a bad capacitor, checked the Freon levels, and had cool air blowing in less than an hour. Upfront price was exactly as promised."
-              </p>
-            </div>
-            <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
-              <div class="w-10 h-10 rounded-full bg-slate-300 font-bold text-slate-700 flex items-center justify-center text-sm">
-                RH
-              </div>
-              <div>
-                <div class="font-bold text-sm text-brand-navy">Robert Henderson</div>
-                <div class="text-xs text-slate-500">Dallas, TX • AC Emergency Repair</div>
+
+              <!-- Content Row: Avatar on Left, Quote & Author on Right -->
+              <div class="flex items-start gap-4">
+                <img 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" 
+                  alt="Robert Henderson" 
+                  class="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover shrink-0 ring-2 ring-emerald-100 shadow-sm"
+                  loading="lazy"
+                  width="64"
+                  height="64"
+                />
+                
+                <div class="flex-1 min-w-0">
+                  <p class="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed mb-3">
+                    "Our AC quit working at 6 PM during a 104-degree heatwave in Dallas. We called HVACConnectUSA and technician Marcus arrived in 40 minutes! Solved our AC issue quickly and upfront price was as promised."
+                  </p>
+
+                  <div class="flex flex-wrap items-center gap-1.5">
+                    <span class="font-bold text-xs sm:text-sm text-[#052e24] font-heading">Robert Henderson</span>
+                    <span class="text-amber-400 text-xs sm:text-sm tracking-wider">★★★★★</span>
+                  </div>
+                  <span class="block text-[11px] text-slate-400 mt-0.5">Dallas, TX • AC Emergency Repair</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Testimonial 2 -->
-          <div class="bg-slate-50 p-7 rounded-2xl border border-slate-200 flex flex-col justify-between">
+          <!-- Testimonial 2 (Sarah Jenkins) -->
+          <div class="bg-white p-6 sm:p-7 rounded-3xl border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col justify-between relative group">
             <div>
-              <div class="flex items-center justify-between mb-4">
-                <div class="text-amber-400 text-base">★★★★★</div>
-                <span class="text-xs font-semibold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">Verified Service</span>
+              <!-- Green Quote Mark -->
+              <div class="mb-3 text-[#0d8a5b]">
+                <svg class="w-6 h-6 fill-current text-[#0d8a5b]" viewBox="0 0 24 24">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                </svg>
               </div>
-              <p class="text-sm text-slate-700 italic leading-relaxed mb-6">
-                "Woke up on a sub-zero Sunday morning with no heat and 2 infants in the house. Every other company had voicemails. HVACConnectUSA answered instantly. Tech Dave showed up within 50 minutes, fixed the furnace ignition sensor, and did not charge an overtime fee!"
-              </p>
-            </div>
-            <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
-              <div class="w-10 h-10 rounded-full bg-slate-300 font-bold text-slate-700 flex items-center justify-center text-sm">
-                SL
-              </div>
-              <div>
-                <div class="font-bold text-sm text-brand-navy">Sarah Jenkins-Lin</div>
-                <div class="text-xs text-slate-500">Chicago, IL • Furnace Heating Repair</div>
+
+              <!-- Content Row: Avatar on Left, Quote & Author on Right -->
+              <div class="flex items-start gap-4">
+                <img 
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" 
+                  alt="Sarah Jenkins-Lin" 
+                  class="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover shrink-0 ring-2 ring-emerald-100 shadow-sm"
+                  loading="lazy"
+                  width="64"
+                  height="64"
+                />
+                
+                <div class="flex-1 min-w-0">
+                  <p class="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed mb-3">
+                    "Highly recommend HVACConnectUSA. Woke up with no heat and 2 infants in the house. Tech Dave showed up within 50 minutes, fixed the furnace ignition sensor, and charged zero overtime fee!"
+                  </p>
+
+                  <div class="flex flex-wrap items-center gap-1.5">
+                    <span class="font-bold text-xs sm:text-sm text-[#052e24] font-heading">Sarah Jenkins-Lin</span>
+                    <span class="text-amber-400 text-xs sm:text-sm tracking-wider">★★★★★</span>
+                  </div>
+                  <span class="block text-[11px] text-slate-400 mt-0.5">Chicago, IL • Furnace Heating Repair</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Testimonial 3 -->
-          <div class="bg-slate-50 p-7 rounded-2xl border border-slate-200 flex flex-col justify-between">
+          <!-- Testimonial 3 (Michael Keller) -->
+          <div class="bg-white p-6 sm:p-7 rounded-3xl border border-slate-100 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col justify-between relative group">
             <div>
-              <div class="flex items-center justify-between mb-4">
-                <div class="text-amber-400 text-base">★★★★★</div>
-                <span class="text-xs font-semibold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">Verified Service</span>
+              <!-- Green Quote Mark -->
+              <div class="mb-3 text-[#0d8a5b]">
+                <svg class="w-6 h-6 fill-current text-[#0d8a5b]" viewBox="0 0 24 24">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                </svg>
               </div>
-              <p class="text-sm text-slate-700 italic leading-relaxed mb-6">
-                "Water heater burst in our garage flooding the area. Called the hotline, technician arrived with a replacement Rheem tank unit, hauled the old one away, and cleaned up the spill. Professional, clean, and courteous. 10/10 recommend."
-              </p>
-            </div>
-            <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
-              <div class="w-10 h-10 rounded-full bg-slate-300 font-bold text-slate-700 flex items-center justify-center text-sm">
-                MK
-              </div>
-              <div>
-                <div class="font-bold text-sm text-brand-navy">Michael Keller</div>
-                <div class="text-xs text-slate-500">Atlanta, GA • Water Heater &amp; Plumbing</div>
+
+              <!-- Content Row: Avatar on Left, Quote & Author on Right -->
+              <div class="flex items-start gap-4">
+                <img 
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" 
+                  alt="Michael Keller" 
+                  class="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover shrink-0 ring-2 ring-emerald-100 shadow-sm"
+                  loading="lazy"
+                  width="64"
+                  height="64"
+                />
+                
+                <div class="flex-1 min-w-0">
+                  <p class="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed mb-3">
+                    "Affordable, fast, and professional. Water heater burst in our garage flooding the area. Technician arrived with a replacement unit, hauled the old one away, and cleaned the spill. 10/10 recommend."
+                  </p>
+
+                  <div class="flex flex-wrap items-center gap-1.5">
+                    <span class="font-bold text-xs sm:text-sm text-[#052e24] font-heading">Michael Keller</span>
+                    <span class="text-amber-400 text-xs sm:text-sm tracking-wider">★★★★★</span>
+                  </div>
+                  <span class="block text-[11px] text-slate-400 mt-0.5">Atlanta, GA • Water Heater &amp; Plumbing</span>
+                </div>
               </div>
             </div>
           </div>
 
+        </div>
+
+        <!-- Carousel Pagination Dots (Matching Screenshot) -->
+        <div class="flex items-center justify-center gap-1.5 mt-9">
+          <span class="w-2 h-2 rounded-full bg-slate-300"></span>
+          <span class="w-6 h-2 rounded-full bg-[#0d8a5b]"></span>
+          <span class="w-2 h-2 rounded-full bg-slate-300"></span>
         </div>
 
       </div>
