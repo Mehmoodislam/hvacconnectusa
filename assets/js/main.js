@@ -25,6 +25,22 @@ function initMobileMenu() {
     toggleBtn.setAttribute('aria-expanded', isExpanded.toString());
   });
 
+  // Services Mega Menu Accordion in Mobile Nav
+  const servicesToggle = document.getElementById('mobileServicesToggle');
+  const servicesSubmenu = document.getElementById('mobileServicesSubmenu');
+  const servicesChevron = document.getElementById('mobileServicesChevron');
+  
+  if (servicesToggle && servicesSubmenu) {
+    servicesToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isHidden = servicesSubmenu.classList.toggle('hidden');
+      if (servicesChevron) {
+        servicesChevron.classList.toggle('rotate-180', !isHidden);
+      }
+      servicesToggle.setAttribute('aria-expanded', (!isHidden).toString());
+    });
+  }
+
   // Close when clicking nav links
   const links = mobileNav.querySelectorAll('a');
   links.forEach(link => {
