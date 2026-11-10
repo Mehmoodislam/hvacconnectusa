@@ -38,13 +38,25 @@
             'xs': '400px'
           },
           colors: {
+            pine: {
+              deep: '#042018',
+              dark: '#052e24',
+              mid: '#083c2e',
+              light: '#0d4d3a'
+            },
+            emeraldBrand: {
+              DEFAULT: '#0d8a5b',
+              hover: '#0b774e',
+              mint: '#34d399',
+              light: '#e8f8f0'
+            },
             brand: {
-              navy: '#0A192F',
+              navy: '#062d22',
               slate: '#1E293B',
-              orange: '#FF5E00',
-              orangeHover: '#E05200',
-              blue: '#0284C7',
-              cyan: '#38BDF8',
+              orange: '#0d8a5b',
+              orangeHover: '#0b774e',
+              blue: '#0d8a5b',
+              cyan: '#34d399',
               emerald: '#10B981',
               lightBg: '#F8FAFC'
             }
@@ -185,85 +197,99 @@
   }
   </script>
 </head>
-<body class="bg-brand-lightBg text-slate-800 antialiased selection:bg-brand-orange selection:text-white">
+<body class="bg-white text-slate-800 antialiased selection:bg-[#0d8a5b] selection:text-white">
 
   <!-- =========================================================================
-       COMBINED STICKY HEADER WRAPPER (Prevents Overlap & Mobile Glitches)
+       COMBINED STICKY HEADER WRAPPER (Emerald Pine Theme from Image)
        ========================================================================= -->
   <div class="sticky top-0 z-50 w-full shadow-md bg-white">
     
-    <!-- Top Emergency Announcement Bar -->
-    <aside class="bg-brand-navy text-white py-2 px-3 sm:px-4 border-b border-slate-800">
+    <!-- Top Emergency Announcement Bar (Deep Pine Green #052e24) -->
+    <aside class="bg-[#052e24] text-white py-2 px-3 sm:px-4 border-b border-[#093c2e]">
       <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
         
+        <!-- Left: Status & Dispatch Info -->
         <div class="flex items-center gap-2 min-w-0">
-          <span class="inline-flex items-center justify-center px-1.5 py-0.5 rounded text-[10px] sm:text-xs font-black bg-brand-orange text-white uppercase tracking-wider shrink-0 animate-pulse">
+          <span class="inline-flex items-center justify-center px-1.5 py-0.5 rounded text-[10px] sm:text-xs font-black bg-[#0d8a5b] text-white uppercase tracking-wider shrink-0 animate-pulse">
             24/7 Live
           </span>
           <span class="text-slate-200 text-xs sm:text-sm truncate">
-            🚨 <strong class="hidden xs:inline">Emergency Dispatch:</strong> Avg. arrival <strong class="text-amber-300">45 Mins</strong>
+            🚨 <strong class="hidden xs:inline">Emergency Dispatch:</strong> Avg. arrival <strong class="text-[#34d399]">45 Minutes</strong>
           </span>
         </div>
         
+        <!-- Right: Techs, Direct Phone & Social Icons from Screenshot -->
         <div class="flex items-center gap-3 shrink-0 text-xs font-medium">
-          <div class="hidden md:flex items-center gap-1.5 text-emerald-400">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 live-indicator"></span>
+          <div class="hidden md:flex items-center gap-1.5 text-[#34d399]">
+            <span class="w-2 h-2 rounded-full bg-[#34d399] live-indicator"></span>
             <span><strong id="liveTechCount">28</strong> Techs Available</span>
           </div>
-          <a href="tel:+18005554822" class="text-amber-400 hover:text-white font-bold text-xs sm:text-sm flex items-center gap-1.5 transition">
-            <svg class="w-3.5 h-3.5 fill-current text-brand-orange shrink-0" viewBox="0 0 24 24"><path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.3-.5-3.5 0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1z"/></svg>
+          <span class="text-[#0d4d3a] hidden sm:inline">|</span>
+          <a href="tel:+18005554822" class="text-white hover:text-[#34d399] font-bold text-xs sm:text-sm flex items-center gap-1.5 transition">
+            <svg class="w-3.5 h-3.5 fill-current text-[#34d399] shrink-0" viewBox="0 0 24 24"><path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.3-.5-3.5 0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1z"/></svg>
             <span class="hidden sm:inline">Direct Line:</span>
             <span>(800) 555-HVAC</span>
           </a>
+          <!-- Circular Social Icons from Screenshot -->
+          <div class="hidden sm:flex items-center gap-1.5 pl-1">
+            <span class="w-5 h-5 rounded-full bg-white text-[#052e24] hover:bg-[#34d399] flex items-center justify-center font-bold text-[10px] cursor-pointer transition">f</span>
+            <span class="w-5 h-5 rounded-full bg-white text-[#052e24] hover:bg-[#34d399] flex items-center justify-center font-bold text-[10px] cursor-pointer transition">𝕏</span>
+            <span class="w-5 h-5 rounded-full bg-white text-[#052e24] hover:bg-[#34d399] flex items-center justify-center font-bold text-[9px] cursor-pointer transition">▶</span>
+            <span class="w-5 h-5 rounded-full bg-white text-[#052e24] hover:bg-[#34d399] flex items-center justify-center font-bold text-[10px] cursor-pointer transition">in</span>
+          </div>
         </div>
 
       </div>
     </aside>
 
-    <!-- Main Navigation Header -->
+    <!-- Main Navigation Header (Clean White Bar with Green Highlights) -->
     <header class="bg-white/98 backdrop-blur-md border-b border-slate-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16 sm:h-20">
           
-          <!-- Brand Logo -->
-          <a href="#" class="flex items-center gap-2.5 sm:gap-3 group focus:outline-none focus:ring-2 focus:ring-brand-blue rounded-lg p-1">
-            <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-tr from-brand-navy via-brand-blue to-cyan-400 flex items-center justify-center shadow-md text-white font-black text-lg sm:text-xl tracking-tighter group-hover:scale-105 transition-transform">
-              HC
+          <!-- Brand Logo (House Shield & Leaf Emblem) -->
+          <a href="#" class="flex items-center gap-2.5 sm:gap-3 group focus:outline-none focus:ring-2 focus:ring-[#0d8a5b] rounded-lg p-1">
+            <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-tr from-[#052e24] via-[#083c2e] to-[#0d8a5b] flex items-center justify-center shadow-md text-white font-black text-lg sm:text-xl tracking-tighter group-hover:scale-105 transition-transform">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+              </svg>
             </div>
             <div class="flex flex-col">
-              <span class="text-lg sm:text-2xl font-black tracking-tight text-brand-navy font-heading leading-tight">
-                HVAC<span class="text-brand-orange">CONNECT</span><span class="text-[10px] sm:text-xs ml-1 font-bold px-1.5 py-0.5 rounded bg-blue-100 text-brand-blue">USA</span>
+              <span class="text-xl sm:text-2xl font-black tracking-tight text-[#062d22] font-heading leading-tight">
+                HVAC<span class="text-[#0d8a5b]">CONNECT</span><span class="text-[10px] sm:text-xs ml-1 font-bold px-1.5 py-0.5 rounded bg-[#e8f8f0] text-[#0d8a5b]">USA</span>
               </span>
-              <span class="text-[9px] sm:text-[11px] font-semibold text-slate-500 tracking-wider uppercase -mt-0.5">Emergency Heating • Cooling • Plumbing</span>
+              <span class="text-[9px] sm:text-[10px] font-semibold text-slate-500 tracking-wider uppercase -mt-0.5">Emergency Heating • Cooling • Plumbing</span>
             </div>
           </a>
 
-          <!-- Desktop Navigation -->
-          <nav class="hidden lg:flex items-center gap-8 font-semibold text-sm text-slate-700" aria-label="Main Navigation">
-            <a href="#services" class="hover:text-brand-orange transition-colors">Services</a>
-            <a href="#why-us" class="hover:text-brand-orange transition-colors">Why Choose Us</a>
-            <a href="#estimator" class="hover:text-brand-orange transition-colors">Cost Estimator</a>
-            <a href="#reviews" class="hover:text-brand-orange transition-colors">Customer Reviews</a>
-            <a href="#faq" class="hover:text-brand-orange transition-colors">FAQ</a>
+          <!-- Desktop Navigation with Active Underline and Green Hover -->
+          <nav class="hidden lg:flex items-center gap-8 font-semibold text-sm" aria-label="Main Navigation">
+            <a href="#" class="nav-link-active font-bold transition-colors">Home</a>
+            <a href="#services" class="text-slate-700 hover:text-[#0d8a5b] transition-colors">Services</a>
+            <a href="#why-us" class="text-slate-700 hover:text-[#0d8a5b] transition-colors">Why Choose Us</a>
+            <a href="#estimator" class="text-slate-700 hover:text-[#0d8a5b] transition-colors">Cost Estimator</a>
+            <a href="#reviews" class="text-slate-700 hover:text-[#0d8a5b] transition-colors">Customer Reviews</a>
+            <a href="#faq" class="text-slate-700 hover:text-[#0d8a5b] transition-colors">FAQ</a>
           </nav>
 
-          <!-- Right Side Direct Actions (Desktop) -->
+          <!-- Right Side CTA: Vibrant Emerald Pill Button -->
           <div class="hidden sm:flex items-center gap-4">
             <div class="text-right">
               <span class="block text-[11px] font-bold uppercase tracking-wider text-slate-400">Speak With Dispatcher</span>
-              <a href="tel:+18005554822" class="text-lg font-black text-brand-navy hover:text-brand-orange transition-colors flex items-center gap-1 font-heading">
+              <a href="tel:+18005554822" class="text-lg font-black text-[#062d22] hover:text-[#0d8a5b] transition-colors flex items-center gap-1 font-heading">
                 (800) 555-4822
               </a>
             </div>
 
-            <a href="#dispatch-form" class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg text-sm font-bold text-white bg-brand-orange hover:bg-brand-orangeHover shadow-lg shadow-orange-500/25 transition-all transform hover:-translate-y-0.5 focus:ring-2 focus:ring-offset-2 focus:ring-brand-orange">
-              Book Service Now
+            <a href="#dispatch-form" class="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-sm font-bold text-white bg-[#0d8a5b] hover:bg-[#0b774e] shadow-md shadow-emerald-700/25 transition-all transform hover:-translate-y-0.5 focus:ring-2 focus:ring-offset-2 focus:ring-[#0d8a5b]">
+              <span>Book Service Now</span>
+              <span class="ml-1.5">&rarr;</span>
             </a>
           </div>
 
           <!-- Mobile Actions: Quick Call & Hamburger Toggle -->
           <div class="flex lg:hidden items-center gap-2">
-            <a href="tel:+18005554822" class="px-2.5 py-1.5 sm:p-2.5 rounded-lg bg-orange-50 text-brand-orange border border-orange-200 font-extrabold text-xs flex items-center gap-1 shadow-sm active:scale-95 transition-transform" aria-label="Call Emergency Dispatch">
+            <a href="tel:+18005554822" class="px-3 py-1.5 rounded-full bg-[#e8f8f0] text-[#0d8a5b] border border-emerald-200 font-extrabold text-xs flex items-center gap-1 shadow-sm active:scale-95 transition-transform" aria-label="Call Emergency Dispatch">
               <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.3-.5-3.5 0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1z"/></svg>
               <span>Call</span>
             </a>
@@ -278,14 +304,15 @@
 
         <!-- Mobile Dropdown Navigation -->
         <div id="mobileNav" class="hidden lg:hidden border-t border-slate-200 py-3 space-y-2 bg-white">
+          <a href="#" class="block px-3 py-2 rounded-md font-semibold text-sm text-[#0d8a5b] bg-[#e8f8f0]">Home</a>
           <a href="#services" class="block px-3 py-2 rounded-md font-semibold text-sm text-slate-700 hover:bg-slate-100">Services</a>
           <a href="#why-us" class="block px-3 py-2 rounded-md font-semibold text-sm text-slate-700 hover:bg-slate-100">Why Choose Us</a>
           <a href="#estimator" class="block px-3 py-2 rounded-md font-semibold text-sm text-slate-700 hover:bg-slate-100">Cost Estimator</a>
           <a href="#reviews" class="block px-3 py-2 rounded-md font-semibold text-sm text-slate-700 hover:bg-slate-100">Reviews &amp; Ratings</a>
           <a href="#faq" class="block px-3 py-2 rounded-md font-semibold text-sm text-slate-700 hover:bg-slate-100">FAQ</a>
           <div class="pt-2">
-            <a href="#dispatch-form" class="block w-full text-center py-2.5 rounded-lg text-white font-bold text-sm bg-brand-orange shadow-md">
-              Book Priority Service Now
+            <a href="#dispatch-form" class="block w-full text-center py-2.5 rounded-full text-white font-bold text-sm bg-[#0d8a5b] shadow-md">
+              Book Priority Service Now &rarr;
             </a>
           </div>
         </div>
@@ -296,96 +323,104 @@
   </div>
 
   <!-- =========================================================================
-       HERO SECTION (High Conversion & Instant Dispatch Search)
+       HERO SECTION (Background Image with Gradient Shading + Right Dispatch Form Card)
        ========================================================================= -->
   <main role="main">
-    <section class="relative bg-gradient-to-b from-slate-900 via-brand-navy to-slate-900 text-white pt-8 pb-16 sm:pt-14 sm:pb-20 lg:pt-20 lg:pb-28 overflow-hidden hero-overlay">
-      <!-- Background Graphic Accents -->
-      <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
+    <section class="relative text-white pt-10 pb-16 sm:pt-14 sm:pb-20 lg:pt-16 lg:pb-20 overflow-hidden hero-pine-bg">
+      
+      <!-- Background Ambient Glow & Dot Overlay -->
+      <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#34d399_1px,transparent_1px)] [background-size:28px_28px] pointer-events-none"></div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
-          <!-- Left Column: High-Impact SEO & Urgency Copy -->
+          <!-- Left Column: Copy & Actions -->
           <div class="lg:col-span-7 text-center lg:text-left">
             
             <!-- Trust Pill -->
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700 text-[11px] sm:text-xs font-semibold text-slate-200 mb-5 backdrop-blur-md">
-              <span class="flex h-2 w-2 relative">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-              </span>
-              <span>⭐ Rated #1 HVAC &amp; Plumbing Network • 4.9/5 Stars</span>
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0b3d30]/90 border border-[#145a46] text-xs font-semibold text-[#34d399] mb-5 backdrop-blur-md">
+              <span class="w-2 h-2 rounded-full bg-[#34d399]"></span>
+              <span>Expert HVAC &amp; Plumbing Services • Rated #1 Network</span>
             </div>
 
-            <!-- Primary H1 for SEO -->
-            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black font-heading tracking-tight text-white leading-tight sm:leading-[1.1] mb-5 sm:mb-6">
-              24/7 Emergency <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-white">HVAC &amp; Plumbing</span> Repair Near You
+            <!-- Primary H1 with Green Highlight -->
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black font-heading tracking-tight text-white leading-[1.1] mb-5">
+              24/7 Emergency <span class="text-[#34d399]">HVAC &amp; Plumbing</span> Repair Near You
             </h1>
 
-            <p class="text-base sm:text-xl text-slate-300 font-normal leading-relaxed mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0">
-              Is your AC blowing warm air, furnace dead in the freeze, or dealing with a plumbing leak? Connect with licensed, vetted local technicians dispatched in <strong class="text-white underline decoration-brand-orange decoration-2">under 60 minutes</strong>. Upfront flat-rate pricing with zero overtime fees.
+            <p class="text-base sm:text-lg text-slate-200 font-normal leading-relaxed mb-7 max-w-xl mx-auto lg:mx-0">
+              Is your AC blowing warm air, furnace dead in the freeze, or dealing with a plumbing leak? Connect with licensed, vetted local technicians dispatched in <strong class="text-white underline decoration-[#34d399] decoration-2">under 60 minutes</strong>. Upfront flat-rate pricing with zero overtime fees.
             </p>
 
-            <!-- ZIP Code Instant Coverage Checker (Core Interaction Benchmark) -->
-            <div class="bg-white/10 backdrop-blur-md p-4 sm:p-5 rounded-2xl border border-white/15 max-w-xl mx-auto lg:mx-0 shadow-2xl">
-              <span class="block text-xs font-bold text-cyan-300 uppercase tracking-wider mb-2 text-left">
-                Check Instant Technician Availability in Your Area:
+            <!-- Buttons Row (Schedule Service + Call Dispatch) -->
+            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 mb-7">
+              <a href="#dispatch-form" class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-[#0d8a5b] hover:bg-[#0b774e] text-white font-bold text-sm tracking-wide shadow-lg shadow-emerald-950/40 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                <span>Schedule Service</span>
+                <span>&rarr;</span>
+              </a>
+
+              <a href="tel:+18005554822" class="w-full sm:w-auto px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold text-sm border border-white/25 transition flex items-center justify-center gap-2">
+                <svg class="w-4 h-4 text-[#34d399] fill-current" viewBox="0 0 24 24"><path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.3-.5-3.5 0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1z"/></svg>
+                <span>Call (800) 555-4822</span>
+              </a>
+            </div>
+
+            <!-- ZIP Code Instant Coverage Checker (Translucent Pine Glass) -->
+            <div class="bg-[#083428]/85 backdrop-blur-md p-4 rounded-2xl border border-[#125340] max-w-lg mx-auto lg:mx-0 shadow-2xl text-left">
+              <span class="block text-xs font-bold text-[#34d399] uppercase tracking-wider mb-2">
+                Check Instant Technician Availability in Your ZIP Code:
               </span>
-              <form id="zipCheckForm" class="flex flex-col sm:flex-row gap-3">
+              <form id="zipCheckForm" class="flex flex-col sm:flex-row gap-2.5">
                 <div class="relative flex-1">
-                  <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                  </div>
-                  <input type="text" id="zipCodeInput" placeholder="Enter 5-digit US ZIP (e.g. 75001)" maxlength="5" class="w-full pl-11 pr-4 py-3.5 rounded-xl bg-white text-slate-900 placeholder-slate-400 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-brand-orange" required>
+                  <input type="text" id="zipCodeInput" placeholder="Enter 5-digit US ZIP (e.g. 75001)" maxlength="5" class="w-full px-4 py-2.5 rounded-xl bg-white text-slate-900 placeholder-slate-400 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-[#0d8a5b]" required>
                 </div>
-                <button type="submit" class="px-6 py-3.5 rounded-xl bg-brand-orange hover:bg-brand-orangeHover text-white font-bold text-sm tracking-wide transition shadow-lg shadow-orange-500/30 flex items-center justify-center gap-2 whitespace-nowrap">
-                  <span>Find Available Tech</span>
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                <button type="submit" class="px-5 py-2.5 rounded-xl bg-[#0d8a5b] hover:bg-[#0b774e] text-white font-bold text-xs uppercase tracking-wider transition shadow-md whitespace-nowrap">
+                  Check Coverage &rarr;
                 </button>
               </form>
               <div id="zipCheckResult" class="hidden"></div>
             </div>
 
-            <!-- Bullet Guarantee Highlights -->
-            <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-3 text-left max-w-xl mx-auto lg:mx-0 text-xs sm:text-sm text-slate-300">
+            <!-- 3 Bullet Guarantee Highlights -->
+            <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 text-left max-w-lg mx-auto lg:mx-0 text-xs text-slate-200">
               <div class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <svg class="w-4 h-4 text-[#34d399] shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
                 <span>Upfront Flat Pricing</span>
               </div>
               <div class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                <span>NATE & EPA Certified</span>
+                <svg class="w-4 h-4 text-[#34d399] shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <span>NATE &amp; EPA Certified</span>
               </div>
               <div class="flex items-center gap-2">
-                <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                <span>1-Year Repair Warranty</span>
+                <svg class="w-4 h-4 text-[#34d399] shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                <span>1-Year Warranty</span>
               </div>
             </div>
 
           </div>
 
-          <!-- Right Column: Priority Dispatch Booking Card -->
+          <!-- Right Column: Priority Dispatch Booking Card (Returned Popup Form) -->
           <div class="lg:col-span-5">
-            <div id="dispatch-form" class="bg-white rounded-3xl p-6 sm:p-8 text-slate-800 shadow-2xl border border-slate-100 relative">
+            <div id="dispatch-form" class="bg-white rounded-3xl p-6 sm:p-7 text-slate-800 shadow-2xl border border-slate-100 relative">
               
               <!-- Badge -->
-              <div class="absolute -top-3.5 right-6 bg-brand-orange text-white text-xs font-black uppercase px-3 py-1 rounded-full shadow-md">
+              <div class="absolute -top-3.5 right-6 bg-[#0d8a5b] text-white text-xs font-black uppercase px-3 py-1 rounded-full shadow-md">
                 Fastest Response
               </div>
 
               <div class="mb-5">
-                <h2 class="text-2xl font-black font-heading text-brand-navy">Request Immediate Dispatch</h2>
-                <p class="text-xs text-slate-500 mt-1">Fill out the quick form below or call directly. Local dispatch will call back in &lt; 5 minutes.</p>
+                <h2 class="text-2xl font-black font-heading text-[#052e24]">Request Immediate Dispatch</h2>
+                <p class="text-xs text-slate-500 mt-1">Fill out the quick form below. Local dispatch will call back in &lt; 5 minutes.</p>
               </div>
 
-              <form id="emergencyDispatchForm" class="space-y-4">
+              <form id="emergencyDispatchForm" class="space-y-3.5">
                 <div>
-                  <label for="formService" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">What service do you need?</label>
-                  <select id="formService" class="w-full px-3.5 py-3 rounded-xl border border-slate-300 text-sm font-semibold focus:ring-2 focus:ring-brand-blue focus:outline-none bg-slate-50">
+                  <label for="formService" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Select Service Needed</label>
+                  <select id="formService" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm font-semibold focus:ring-2 focus:ring-[#0d8a5b] focus:outline-none bg-slate-50">
                     <option value="emergency-ac">❄️ Emergency AC Repair (Not Cooling / Frozen)</option>
-                    <option value="furnace-heating">🔥 Heating & Furnace Repair (No Heat)</option>
-                    <option value="emergency-plumbing">🚰 Emergency Plumbing & Water Leaks</option>
+                    <option value="furnace-heating">🔥 Heating &amp; Furnace Repair (No Heat)</option>
+                    <option value="emergency-plumbing">🚰 Emergency Plumbing &amp; Water Leaks</option>
                     <option value="water-heater">🚿 Water Heater Repair / Replacement</option>
                     <option value="heat-pump">⚡ Heat Pump Repair / Tune-Up</option>
                     <option value="air-quality">🍃 Indoor Air Quality / Duct Cleaning</option>
@@ -396,22 +431,22 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
                     <label for="formName" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Full Name</label>
-                    <input type="text" id="formName" placeholder="John Doe" required class="w-full px-3.5 py-3 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-blue focus:outline-none">
+                    <input type="text" id="formName" placeholder="John Doe" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm focus:ring-2 focus:ring-[#0d8a5b] focus:outline-none">
                   </div>
                   <div>
                     <label for="formPhone" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Phone Number</label>
-                    <input type="tel" id="formPhone" placeholder="(555) 000-0000" required class="w-full px-3.5 py-3 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-blue focus:outline-none">
+                    <input type="tel" id="formPhone" placeholder="(555) 000-0000" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm focus:ring-2 focus:ring-[#0d8a5b] focus:outline-none">
                   </div>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
                     <label for="formZipCode" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">ZIP Code</label>
-                    <input type="text" id="formZipCode" placeholder="ZIP Code" maxlength="5" required class="w-full px-3.5 py-3 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-brand-blue focus:outline-none">
+                    <input type="text" id="formZipCode" placeholder="ZIP Code" maxlength="5" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm focus:ring-2 focus:ring-[#0d8a5b] focus:outline-none">
                   </div>
                   <div>
                     <label for="formUrgency" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Urgency</label>
-                    <select id="formUrgency" class="w-full px-3.5 py-3 rounded-xl border border-slate-300 text-sm font-semibold focus:ring-2 focus:ring-brand-blue focus:outline-none bg-slate-50">
+                    <select id="formUrgency" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm font-semibold focus:ring-2 focus:ring-[#0d8a5b] focus:outline-none bg-slate-50">
                       <option value="asap">Immediate Emergency (&lt; 60 Mins)</option>
                       <option value="today">Today (Flexible Time)</option>
                       <option value="tomorrow">Tomorrow / Later This Week</option>
@@ -419,19 +454,19 @@
                   </div>
                 </div>
 
-                <button type="submit" class="w-full py-4 rounded-xl bg-brand-orange hover:bg-brand-orangeHover text-white font-extrabold text-base tracking-wide shadow-xl shadow-orange-500/25 transition-all transform hover:-translate-y-0.5">
-                  Confirm &amp; Dispatch Local Tech
+                <button type="submit" class="w-full py-3.5 rounded-full bg-[#0d8a5b] hover:bg-[#0b774e] text-white font-extrabold text-sm tracking-wide shadow-xl shadow-emerald-700/25 transition-all transform hover:-translate-y-0.5">
+                  Confirm &amp; Dispatch Local Tech &rarr;
                 </button>
 
                 <p class="text-[11px] text-center text-slate-400">
-                  🔒 100% Privacy Protected. No spam. A certified technician will call you to confirm your arrival window.
+                  🔒 100% Privacy Protected. Priority local certified technician dispatch.
                 </p>
               </form>
 
               <!-- Urgent Direct Call Alternative -->
-              <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between">
+              <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between">
                 <span class="text-xs text-slate-500 font-medium">Prefer to call right now?</span>
-                <a href="tel:+18005554822" class="text-sm font-black text-brand-navy hover:text-brand-orange transition flex items-center gap-1">
+                <a href="tel:+18005554822" class="text-sm font-black text-[#052e24] hover:text-[#0d8a5b] transition flex items-center gap-1 font-heading">
                   📞 (800) 555-4822
                 </a>
               </div>
@@ -444,49 +479,53 @@
     </section>
 
     <!-- =========================================================================
-       TRUST BADGES & RECOGNITION BAR
-       ========================================================================= -->
-    <section class="bg-white py-6 border-b border-slate-200">
+         STATS & TRUST CARDS BAR (Deep Pine Green #041f18 with Dividers from Screenshot)
+         ========================================================================= -->
+    <section class="bg-[#041f18] py-5 border-t border-[#093c2e] border-b border-[#093c2e]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center text-center">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
           
-          <div class="flex items-center justify-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-lg">
-              ✓
+          <!-- Stat 1: 100% Satisfaction -->
+          <div class="flex items-center justify-center gap-3 px-3 border-r border-[#0e4d3a]/50 last:border-r-0">
+            <div class="w-10 h-10 rounded-full bg-[#083c2e] text-[#34d399] flex items-center justify-center font-bold text-base shrink-0 border border-[#0d4d3a]">
+              ❄️
             </div>
             <div class="text-left">
-              <div class="text-sm font-extrabold text-brand-navy">100% Satisfaction</div>
-              <div class="text-xs text-slate-500">Fixed Right Or It's Free</div>
+              <div class="text-xs sm:text-sm font-extrabold text-white">100% Satisfaction</div>
+              <div class="text-[11px] text-[#a7f3d0]">Fixed Right Or It's Free</div>
             </div>
           </div>
 
-          <div class="flex items-center justify-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-blue-100 text-brand-blue flex items-center justify-center font-bold text-sm">
-              A+
-            </div>
-            <div class="text-left">
-              <div class="text-sm font-extrabold text-brand-navy">BBB Accredited</div>
-              <div class="text-xs text-slate-500">A+ Highest Industry Rating</div>
-            </div>
-          </div>
-
-          <div class="flex items-center justify-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center font-bold text-base">
-              ★
-            </div>
-            <div class="text-left">
-              <div class="text-sm font-extrabold text-brand-navy">4.9 / 5 Stars</div>
-              <div class="text-xs text-slate-500">14,800+ Verified Homeowners</div>
-            </div>
-          </div>
-
-          <div class="flex items-center justify-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center font-bold text-base">
+          <!-- Stat 2: BBB Accredited -->
+          <div class="flex items-center justify-center gap-3 px-3 md:border-r border-[#0e4d3a]/50">
+            <div class="w-10 h-10 rounded-full bg-[#083c2e] text-[#34d399] flex items-center justify-center font-bold text-base shrink-0 border border-[#0d4d3a]">
               🛡️
             </div>
             <div class="text-left">
-              <div class="text-sm font-extrabold text-brand-navy">NATE &amp; EPA Certified</div>
-              <div class="text-xs text-slate-500">Vetted &amp; Background Checked</div>
+              <div class="text-xs sm:text-sm font-extrabold text-white">BBB Accredited</div>
+              <div class="text-[11px] text-[#a7f3d0]">A+ Highest Rating</div>
+            </div>
+          </div>
+
+          <!-- Stat 3: 4.9 Stars -->
+          <div class="flex items-center justify-center gap-3 px-3 border-r border-[#0e4d3a]/50 last:border-r-0">
+            <div class="w-10 h-10 rounded-full bg-[#083c2e] text-[#34d399] flex items-center justify-center font-bold text-base shrink-0 border border-[#0d4d3a]">
+              ⭐
+            </div>
+            <div class="text-left">
+              <div class="text-xs sm:text-sm font-extrabold text-white">4.9 / 5 Stars</div>
+              <div class="text-[11px] text-[#a7f3d0]">14,800+ Reviews</div>
+            </div>
+          </div>
+
+          <!-- Stat 4: NATE & EPA Certified -->
+          <div class="flex items-center justify-center gap-3 px-3">
+            <div class="w-10 h-10 rounded-full bg-[#083c2e] text-[#34d399] flex items-center justify-center font-bold text-base shrink-0 border border-[#0d4d3a]">
+              👨‍🔧
+            </div>
+            <div class="text-left">
+              <div class="text-xs sm:text-sm font-extrabold text-white">NATE &amp; EPA Certified</div>
+              <div class="text-[11px] text-[#a7f3d0]">Licensed &amp; Insured</div>
             </div>
           </div>
 
@@ -1260,19 +1299,19 @@
   </footer>
 
   <!-- =========================================================================
-       FULLY RESPONSIVE FLOATING CALL & DISPATCH BAR (Mobile Pinned + Desktop Corner Widget)
+       FULLY RESPONSIVE FLOATING CALL & DISPATCH BAR (Emerald Pine Theme)
        ========================================================================= -->
-  <aside aria-label="Quick Emergency Dispatch Bar" class="fixed bottom-0 left-0 right-0 sm:left-auto sm:right-6 sm:bottom-6 sm:max-w-md z-50 bg-brand-navy/95 backdrop-blur-md border-t sm:border border-slate-700 p-2.5 sm:p-3 sm:rounded-2xl shadow-2xl safe-bottom transition-all duration-300">
+  <aside aria-label="Quick Emergency Dispatch Bar" class="fixed bottom-0 left-0 right-0 sm:left-auto sm:right-6 sm:bottom-6 sm:max-w-md z-50 bg-[#052e24]/95 backdrop-blur-md border-t sm:border border-[#093c2e] p-2.5 sm:p-3 sm:rounded-2xl shadow-2xl safe-bottom transition-all duration-300">
     <div class="flex items-center gap-2">
       <!-- Call Button -->
-      <a href="tel:+18005554822" class="flex-1 py-3 px-3.5 rounded-xl bg-brand-orange hover:bg-brand-orangeHover text-white text-center font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg pulse-emergency active:scale-95 transition-transform">
+      <a href="tel:+18005554822" class="flex-1 py-3 px-3.5 rounded-full bg-[#0d8a5b] hover:bg-[#0b774e] text-white text-center font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg pulse-emerald active:scale-95 transition-transform">
         <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24"><path d="M20 15.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.3-.5-3.5 0-.6-.4-1-1-1H4c-.6 0-1 .4-1 1 0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1z"/></svg>
         <span class="truncate">Call (800) 555-HVAC</span>
       </a>
 
       <!-- Book Online Button -->
-      <a href="#dispatch-form" class="py-3 px-3.5 sm:px-4 rounded-xl bg-white hover:bg-slate-100 text-brand-navy font-extrabold text-xs sm:text-sm border border-slate-200 active:scale-95 transition-transform text-center shrink-0 flex items-center gap-1.5 shadow-md">
-        <svg class="w-4 h-4 text-brand-blue shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+      <a href="#dispatch-form" class="py-3 px-3.5 sm:px-4 rounded-full bg-white hover:bg-slate-100 text-[#052e24] font-extrabold text-xs sm:text-sm border border-slate-200 active:scale-95 transition-transform text-center shrink-0 flex items-center gap-1.5 shadow-md">
+        <svg class="w-4 h-4 text-[#0d8a5b] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
         <span>Book Online</span>
       </a>
     </div>
@@ -1281,17 +1320,17 @@
   <!-- Lead Confirmation Modal -->
   <div id="confirmationModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 backdrop-blur-sm p-4">
     <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl border border-slate-200 text-center">
-      <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-3xl mx-auto mb-4">
+      <div class="w-16 h-16 rounded-full bg-[#e8f8f0] text-[#0d8a5b] flex items-center justify-center text-3xl mx-auto mb-4 font-black">
         ✓
       </div>
-      <h3 class="text-2xl font-black font-heading text-brand-navy mb-2">Dispatch Request Received!</h3>
+      <h3 class="text-2xl font-black font-heading text-[#052e24] mb-2">Dispatch Request Received!</h3>
       <p class="text-sm text-slate-600 mb-6">
-        A certified technician in your immediate ZIP code has been notified. Expect a confirmation call to <strong>(555) 000-0000</strong> within <strong class="text-brand-orange">5 minutes</strong>.
+        A certified technician in your immediate ZIP code has been notified. Expect a confirmation call to <strong>(555) 000-0000</strong> within <strong class="text-[#0d8a5b]">5 minutes</strong>.
       </p>
-      <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 text-xs text-slate-500 mb-6">
+      <div class="p-3 bg-[#e8f8f0] rounded-xl border border-emerald-200 text-xs text-[#052e24] mb-6 font-semibold">
         🚨 <strong>Emergency status:</strong> Priority slot confirmed. Average arrival time: 45 Minutes.
       </div>
-      <button id="closeModalBtn" type="button" class="w-full py-3 rounded-xl bg-brand-navy text-white font-bold text-sm hover:bg-slate-800 transition">
+      <button id="closeModalBtn" type="button" class="w-full py-3 rounded-full bg-[#052e24] text-white font-bold text-sm hover:bg-[#083c2e] transition">
         Understood, Thank You
       </button>
     </div>

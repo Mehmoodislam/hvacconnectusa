@@ -1,19 +1,21 @@
-/* Custom Enhancements for HVACConnectUSA */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap');
+/* Custom Enhancements for HVACConnectUSA - Emerald Pine Theme */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap');
 
 :root {
-  --primary-navy: #0A192F;
-  --secondary-navy: #112240;
-  --accent-blue: #0284C7;
-  --accent-cyan: #38BDF8;
-  --emergency-orange: #FF5E00;
-  --emergency-hover: #E05200;
-  --safety-green: #10B981;
+  --pine-deep: #042018;
+  --pine-dark: #052e24;
+  --pine-mid: #083c2e;
+  --pine-light: #0d4d3a;
+  --emerald-vibrant: #0d8a5b;
+  --emerald-hover: #0b774e;
+  --mint-accent: #34d399;
+  --mint-light: #e8f8f0;
 }
 
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   color: #1E293B;
+  background-color: #FFFFFF;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   padding-bottom: 76px; /* Avoid mobile floating bottom bar overlap */
@@ -34,20 +36,53 @@ h1, h2, h3, h4, .font-heading {
   font-family: 'Outfit', sans-serif;
 }
 
+/* Nav Active Link Indicator */
+.nav-link-active {
+  color: #0d8a5b;
+  position: relative;
+}
+
+.nav-link-active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background-color: #0d8a5b;
+  border-radius: 9999px;
+}
+
+/* Hero Background and Gradient Overlay with Image */
+.hero-pine-bg {
+  background: linear-gradient(135deg, rgba(4, 32, 24, 0.95) 0%, rgba(5, 46, 36, 0.90) 50%, rgba(8, 60, 46, 0.84) 100%),
+              url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+}
+
+.hero-curved-arc {
+  border-bottom-right-radius: 60px;
+}
+
+@media (min-width: 1024px) {
+  .hero-curved-arc {
+    border-bottom-right-radius: 120px;
+  }
+}
+
 /* Pulsing Badge Animations */
 @keyframes pulseGlow {
   0%, 100% {
     transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(255, 94, 0, 0.6);
+    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.6);
   }
   50% {
-    transform: scale(1.04);
-    box-shadow: 0 0 0 10px rgba(255, 94, 0, 0);
+    transform: scale(1.03);
+    box-shadow: 0 0 0 8px rgba(52, 211, 153, 0);
   }
 }
 
-.pulse-emergency {
-  animation: pulseGlow 2s infinite ease-in-out;
+.pulse-emerald {
+  animation: pulseGlow 2.2s infinite ease-in-out;
 }
 
 @keyframes liveDot {
@@ -57,18 +92,6 @@ h1, h2, h3, h4, .font-heading {
 
 .live-indicator {
   animation: liveDot 1.5s infinite ease-in-out;
-}
-
-/* Glassmorphism & Cards */
-.glass-panel {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-
-.hero-overlay {
-  background: radial-gradient(circle at 80% 20%, rgba(2, 132, 199, 0.15) 0%, transparent 60%),
-              radial-gradient(circle at 10% 80%, rgba(255, 94, 0, 0.08) 0%, transparent 50%);
 }
 
 /* Interactive Tabs & Accordions */
@@ -86,6 +109,7 @@ h1, h2, h3, h4, .font-heading {
 
 .faq-item.active .faq-icon {
   transform: rotate(180deg);
+  color: #0d8a5b;
 }
 
 /* Custom Scrollbar */
@@ -96,11 +120,11 @@ h1, h2, h3, h4, .font-heading {
   background: #F1F5F9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
+  background: #A7F3D0;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94A3B8;
+  background: #0d8a5b;
 }
 
 /* Card hover transitions */
@@ -109,6 +133,6 @@ h1, h2, h3, h4, .font-heading {
 }
 .service-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 10px 10px -5px rgba(15, 23, 42, 0.04);
+  border-color: #A7F3D0;
+  box-shadow: 0 20px 25px -5px rgba(13, 138, 91, 0.08), 0 10px 10px -5px rgba(13, 138, 91, 0.04);
 }
-
