@@ -140,8 +140,8 @@ h1, h2, h3, h4, .font-heading {
 }
 .service-card:hover {
   transform: translateY(-4px);
-  border-color: #A7F3D0;
-  box-shadow: 0 20px 25px -5px rgba(13, 138, 91, 0.08), 0 10px 10px -5px rgba(13, 138, 91, 0.04);
+  border-color: #fca5a5;
+  box-shadow: 0 20px 25px -5px rgba(220, 38, 38, 0.10), 0 10px 10px -5px rgba(220, 38, 38, 0.05);
 }
 
 /* Pre-Footer CTA Banner matching exact screenshot reference */
@@ -157,3 +157,27 @@ h1, h2, h3, h4, .font-heading {
   }
 }
 
+/* FluxAiris Modern Red & Navy Theme Hero Background */
+.hero-flux-bg {
+  background: linear-gradient(180deg, rgba(8, 22, 40, 0.60) 0%, rgba(8, 22, 40, 0.75) 40%, rgba(8, 22, 40, 0.96) 80%, rgba(8, 22, 40, 0.99) 100%),
+              url('../images/hero-section.jpg') center/cover no-repeat;
+}
+
+@media (min-width: 1024px) {
+  .hero-flux-bg {
+    background: linear-gradient(90deg, rgba(8, 22, 40, 0.97) 0%, rgba(8, 22, 40, 0.92) 36%, rgba(8, 22, 40, 0.65) 58%, rgba(8, 22, 40, 0.15) 82%, rgba(8, 22, 40, 0.04) 100%),
+                url('../images/hero-section.jpg') right center / cover no-repeat;
+  }
+}
+
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

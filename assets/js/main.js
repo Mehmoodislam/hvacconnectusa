@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initBookingForm();
   initLiveTicker();
+  initProjectsHorizontalScroll();
+  initTestimonialsSlider();
 });
 
 // Mobile Navigation
@@ -227,3 +229,176 @@ function initLiveTicker() {
   }, 12000);
 }
 
+
+
+/**
+ * Projects Section - Pinned Horizontal Scroll on Vertical Page Scroll
+ * When user scrolls into the section, it locks and slides cards right-to-left,
+ * then naturally proceeds downwards once all cards are viewed.
+ */
+function initProjectsHorizontalScroll() {
+  const carousel = document.getElementById('projects-carousel');
+  const progressBar = document.getElementById('projects-progress-bar');
+  const prevBtn = document.getElementById('projects-prev-btn');
+  const nextBtn = document.getElementById('projects-next-btn');
+
+  if (!carousel) return;
+
+  function updateProgress() {
+    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+    if (maxScroll <= 0) return;
+    const progress = Math.max(0, Math.min(1, carousel.scrollLeft / maxScroll));
+    if (progressBar) {
+      const pct = Math.max(15, Math.min(100, Math.round(progress * 100)));
+      progressBar.style.width = pct + '%';
+    }
+  }
+
+  carousel.addEventListener('scroll', updateProgress, { passive: true });
+  setTimeout(updateProgress, 100);
+
+  // Arrow buttons
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      const card = carousel.firstElementChild;
+      const step = card ? card.offsetWidth + 24 : 400;
+      carousel.scrollBy({ left: step, behavior: 'smooth' });
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      const card = carousel.firstElementChild;
+      const step = card ? card.offsetWidth + 24 : 400;
+      carousel.scrollBy({ left: -step, behavior: 'smooth' });
+    });
+  }
+
+  // Mouse wheel scroll:
+  // When scrolling wheel over carousel:
+  // - Slides cards horizontally right-to-left
+  // - When it reaches the end ("jub box khatam hojayega"): stops cleanly and next scroll continues down to reviews!
+  carousel.addEventListener('wheel', (e) => {
+    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+      const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+      const atEnd = carousel.scrollLeft >= maxScroll - 8;
+      const atStart = carousel.scrollLeft <= 8;
+
+      if (e.deltaY > 0 && !atEnd) {
+        e.preventDefault();
+        carousel.scrollLeft += e.deltaY * 1.3;
+      } else if (e.deltaY < 0 && !atStart) {
+        e.preventDefault();
+        carousel.scrollLeft += e.deltaY * 1.3;
+      }
+    }
+  }, { passive: false });
+
+  // Mouse drag support
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  carousel.addEventListener('mousedown', (e) => {
+    isDown = true;
+    carousel.classList.add('cursor-grabbing');
+    startX = e.pageX - carousel.offsetLeft;
+    scrollLeft = carousel.scrollLeft;
+  });
+
+  carousel.addEventListener('mouseleave', () => {
+    isDown = false;
+    carousel.classList.remove('cursor-grabbing');
+  });
+
+  carousel.addEventListener('mouseup', () => {
+    isDown = false;
+    carousel.classList.remove('cursor-grabbing');
+  });
+
+  carousel.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - carousel.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    carousel.scrollLeft = scrollLeft - walk;
+  });
+}
+
+
+/**
+ * Testimonials Slider - Matching Reference Screenshot Layout
+ * Supports Next / Prev buttons, indicator dots, and smooth slide transitions.
+ */
+function initTestimonialsSlider() {
+  const slides = document.querySelectorAll('.testimonial-slide');
+  const dots = document.querySelectorAll('.testimonial-dot');
+  const prevBtn = document.getElementById('testimonial-prev-btn');
+  const nextBtn = document.getElementById('testimonial-next-btn');
+
+  if (!slides.length) return;
+
+  let currentIndex = 0;
+  let autoTimer = null;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      if (i === index) {
+        slide.classList.remove('hidden', 'opacity-0');
+        slide.classList.add('block', 'opacity-100');
+      } else {
+        slide.classList.remove('block', 'opacity-100');
+        slide.classList.add('hidden', 'opacity-0');
+      }
+    });
+
+    dots.forEach((dot, i) => {
+      if (i === index) {
+        dot.className = 'testimonial-dot w-6 h-2 rounded-full bg-amber-400 transition-all cursor-pointer';
+      } else {
+        dot.className = 'testimonial-dot w-2 h-2 rounded-full bg-white/30 hover:bg-white/60 transition-all cursor-pointer';
+      }
+    });
+
+    currentIndex = index;
+  }
+
+  function nextSlide() {
+    const nextIdx = (currentIndex + 1) % slides.length;
+    showSlide(nextIdx);
+  }
+
+  function prevSlide() {
+    const prevIdx = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(prevIdx);
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      resetTimer();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      resetTimer();
+    });
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const idx = parseInt(dot.getAttribute('data-index') || '0', 10);
+      showSlide(idx);
+      resetTimer();
+    });
+  });
+
+  function resetTimer() {
+    if (autoTimer) clearInterval(autoTimer);
+    autoTimer = setInterval(nextSlide, 7000);
+  }
+
+  resetTimer();
+}
